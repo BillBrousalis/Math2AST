@@ -21,5 +21,4 @@ def plot(root: Node, name):
   nodes = lvl_order_traversal(root)
   tree = BinaryTree(nodes=nodes)
   tree.plot(output_path=name, border_color='#FFCE30', fill_color='#aec6cf')
-  print(tree.plot.__code__.co_varnames)
   webbrowser.open(name)

@@ -4,7 +4,7 @@
 
 This is a quick educational project to learn a bit about recursive descent parsing, since writing a compiler from scratch proved troublesome.
 
-The objective is to parse mathematical expressions into an AST with the correct precedence.
+The objective is to parse mathematical expressions into an AST with the correct precedence, and then calculate the result.
 
 To keep things simple, we will not be writing a proper lexer, since this is a one-day project and it's something I have tackled before.
 

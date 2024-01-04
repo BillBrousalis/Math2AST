@@ -2,8 +2,12 @@
 from lexer import *
 from parser import *
 from util import *
+from ast_eval import node_eval
 import glob
 import sys
+import os
+
+PLOT = os.getenv('PLOT', '') == '1'
 
 def run(fname):
   print(f'[*] Testing {fname}')
@@ -15,7 +19,9 @@ def run(fname):
 
   parser = Parser(lex)
   root = parser.parse()
-  plot(root, fname)
+  result = node_eval(root)
+  print(f'Result = {result}')
+  if PLOT: plot(root, fname)
 
 if __name__ == '__main__':
   if len(sys.argv) >= 2:
